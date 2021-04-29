@@ -1,0 +1,93 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body {
+	background: #f3f3f3;
+	color: #000;
+	font-family: sans-serif;
+}
+.contenedor{
+	width: 90%;
+	max-width: 1024px;
+	margin: 20px auto;
+
+	display: grid;
+	grid-gap:20px;
+	grid-template-columns:repeat(3,1fr);
+	grid-template-rows:repeat(6,auto);
+	grid-template-areas:"header header header"
+							"nav nav nav"
+							"galeria galeria galeria"
+							"sidebar plantas plantas"
+							"sidebar animales animales"
+							"footer footer footer";
+
+}
+.contenedor > section,
+.contenedor .cabecera, 
+.contenedor .menuPrincipal,
+.contenedor .galeria,
+.contenedor .footer{
+	background: #606c38;
+	padding: 20px;
+	border-radius: 4px;
+}
+
+.contenedor .cabecera{
+	background: #606c38;
+	color: #fff;
+	grid-area: header;
+}
+
+.contenedor .menuPrincipal{
+	background: #bc6c25;
+	color: #fff;
+	grid-area:nav;
+}
+
+.contenedor .galeria{
+	grid-area: galeria;
+	background: #dda15e;
+	color: #fff;
+
+}
+
+.contenedor .sidebar{
+	grid-column: 3/ 4;
+	background: #606c38;
+	grid-area: sidebar;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+	color: #fff;
+
+}
+
+
+
+.contenedor .plantas,
+.contenedor .animales{
+	background: #606c38;
+	color: #fff;
+	display: flex;
+	align-items:center;
+	justify-content:center;
+}
+
+.contenedor .plantas{
+	grid-area:plantas;
+}
+
+
+.contenedor .animales{
+	grid-area:animales;
+}
+
+.contenedor .footer{
+	background: #000;
+	color: #fff;
+	grid-area: footer;
+
+}
+
